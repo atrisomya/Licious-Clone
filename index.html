@@ -5,11 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h1>Hello</h1>
-    <nav>
-        this is navbar
-    </nav>
+    <div class="notification-container dismiss">
+        <div class="container">
+            <img src="https://www.licious.in/img/rebranding/user-login-new.jpg" alt="">
+        </div>
+      
+        <div class="login_form">
+            <div class="form_header">
+                <img src="https://www.licious.in/img/rebranding/logo-white.png" alt="">
+                <p class="close" id="closeFilePanel">x</p>
+            </div>
+
+            <div class="form_main">
+                <h3>Login/SignUp</h3>
+                <input type="email" placeholder="Enter your email">
+                <input type="password" placeholder="Enter your password">
+                <button>Login</button>
+                <button>SignUp</button>
+                <p>By signing in you agree to our <span> terms and conditions</span></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <a id="showFilePanel">Open</a>
+    <a >Close</a>
+    <script src="./index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>
