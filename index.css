@@ -2,8 +2,12 @@ html,
 body {
   overflow-x: hidden;
   max-width: 100%;
+  background-color: #f7f6f6;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 .notification-container {
   position: absolute;
   top: 0;
@@ -60,12 +64,12 @@ body {
     margin: 40px 0 0 20px;
   }
   .close{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 10;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: -25px;
+    margin-top: -20px;
     margin-right: 20px;
-    color: whitesmoke;
+    color: #d11243;
     cursor: pointer;
   }
   .form_main{
@@ -114,4 +118,55 @@ body {
   .form_main span{
     color: #d11243;
   }
+.navbar{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fff;
+  }
+  .address{
+    display: flex;
+  }
+  .search{
+    display: flex;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    justify-content: space-between;
+  }
+  .search input{
+    padding: 12px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    width: 250px;
+  }
+  .search img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: -8px;
+  }
+  .category{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+ .category div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 30px;
+ }
+ .category div img{
+  margin-right: 10px;
+ }
   
