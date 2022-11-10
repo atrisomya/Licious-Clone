@@ -168,19 +168,38 @@ function moveToPrevSlide(){
     updateSlidePosition();
 }
 
+// const productContainers = [...document.querySelectorAll('.product-container')];
+// const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+// const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+// productContainers.forEach((item, i) => {
+//     let containerDimensions = item.getBoundingClientRect();
+//     let containerWidth = containerDimensions.width;
+
+//     nxtBtn[i].addEventListener('click', () => {
+//         item.scrollLeft += containerWidth;
+//     })
+
+//     preBtn[i].addEventListener('click', () => {
+//         item.scrollLeft -= containerWidth;
+//     })
+// })
+
+//Slider for Best Selllers 
+
 const productContainers = [...document.querySelectorAll('.product-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
+const nextBtn = [...document.querySelectorAll('#leftBtn')];
+const rightBtn = [...document.querySelectorAll('#rightBtn')];
 
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
 
-    nxtBtn[i].addEventListener('click', () => {
+    rightBtn[i].addEventListener('click', () => {
         item.scrollLeft += containerWidth;
     })
 
-    preBtn[i].addEventListener('click', () => {
+    leftBtn[i].addEventListener('click', () => {
         item.scrollLeft -= containerWidth;
     })
 })
