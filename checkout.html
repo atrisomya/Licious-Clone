@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./checkout.css">
+    <title>Document</title>
+</head>
+<body>
+     <!-- navbar=--------------------------------------------- -->
+     <div class="navbar">
+        <div class="logo">
+            <img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="">
+        </div>
+        <div class="address">
+            <img src="https://www.licious.in/img/rebranding/location_icon.svg" alt="">
+            <p>Banguluru</p>
+        </div>
+        <div class="search">
+            <div>
+                <input type="text" placeholder="Search For Any delicious product">
+                <img src="https://www.licious.in/img/rebranding/search_icon.svg" alt="">
+            </div>
+        </div>
+        <div class="category">
+            <div>
+                <img src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="">
+                <p>Categories</p>
+            </div>
+            <div>
+                <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="">
+                <p id="showFilePanel">Login</p>
+            </div>
+            <div>
+                <img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="">
+                <p>cart</p>
+            </div>
+        </div>
+    </div>
+<!---------------------------------------  Address Form ------------------------------------>
+<div class="checkout_address_form">
+    <div class="address_form">
+        <h3>Add New Address</h3>
+        <input type="text" placeholder="Enter Location">
+        <input type="text" placeholder=" Flat no / Building name / Street name">
+        <input type="text" placeholder=" Landmark (optional)">
+        <input type="text" placeholder="City">
+        <input type="number" placeholder="Mobile number">
+        <input type="email" placeholder="Enter Email">
+        <input type="text" placeholder="Enter Full name">
+        <button>Save & Proceed</button>
+    </div>
+<!------------------------------------------ Payment Form ----------------------------------->
+    <div class="payment_form">
+        <h3>Card Details</h3>
+        <div class="cards">
+        <input type="number" placeholder="Enter card no.">
+        <img src="https://d2407na1z3fc0t.cloudfront.net/Banner/SBI.png" alt="">
+        <img src="https://d2407na1z3fc0t.cloudfront.net/Banner/HDFC.png" alt="">
+        <img src="https://d2407na1z3fc0t.cloudfront.net/Banner/AXIB_1.png" alt="">
+        </div>
+        <div class="card_detail">
+            <input type="number" placeholder=" MM">
+            <input type="number" placeholder="YYYY">
+            <input type="number" placeholder="Enter CVV">
+        </div>
+        <input type="text" placeholder="Name on Card" id="name_on_card">
+        <button>Pay</button>
+    </div>
+</div>
+</body>
+</html>
+<script src="./checkout.js"></script>

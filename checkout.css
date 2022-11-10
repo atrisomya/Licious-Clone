@@ -1,0 +1,166 @@
+.navbar{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fff;
+  }
+  .address{
+    display: flex;
+  }
+  .search{
+    display: flex;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    justify-content: space-between;
+  }
+  .search input{
+    padding: 12px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    width: 250px;
+  }
+  .search img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: -8px;
+  }
+  .category{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+ .category div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 30px;
+ }
+ .category div img{
+  margin-right: 10px;
+ }
+ /************* Address Form **************/
+.checkout_address_form{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(2,48%);
+}
+.address_form{
+    background-color: white;
+    width: 70%;
+    min-height: 550px;
+    bottom: 0px;
+    margin: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    margin-top: 5%;
+    align-items: center;
+    text-align: center;
+  }
+.address_form h3{
+    text-align: left;
+    font-size: 25px;
+    margin: 20px 20px -10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(173, 173, 173);
+  }
+.address_form input{
+    width: 80%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 16px;
+    margin: 15px;
+
+  }
+  .address_form input::placeholder{
+    color: #b9b8b8;
+  }
+.address_form button{
+    width: 80%;
+    padding: 10px 20px 10px 20px;
+    color: aliceblue;
+    background-color: #d11243;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+/************** Payment Form CSS *******************/
+.payment_form{
+    background-color: white;
+    width: 100%;
+    min-height: 360px;
+    bottom: 0px;
+    margin: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    margin-top: 5%;
+    align-items: center;
+    text-align: center;
+  }
+.payment_form h3{
+    text-align: left;
+    font-size: 25px;
+    margin: 20px 20px -10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(173, 173, 173);
+  }
+.payment_form input{
+    width: 80%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 16px;
+    margin: 15px;
+  }
+.payment_form input::placeholder{
+    color: #b9b8b8;
+  }
+.card_detail{
+    display: flex;
+    flex-direction: space-between;
+    margin: 15px;
+}
+.payment_form button{
+    width: 80%;
+    padding: 10px 20px 10px 20px;
+    color: aliceblue;
+    background-color: #d11243;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .cards{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 15px;
+    margin-right: 30px;
+  }
+  .cards>img{
+    width: 40px;
+    height: 40px;  
+  }
+  .payment_form button{
+    width: 200px;
+  }
+  #name_on_card{
+    width: 89%;
+  }
