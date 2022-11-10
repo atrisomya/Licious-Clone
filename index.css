@@ -544,3 +544,94 @@ li img {
 #category:hover #dropdown{
   display: block;
 }
+
+/* Footer */
+.big {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  width: 80%;
+  /* height: 1200px; */
+  /* border: 1px solid black; */
+}
+
+#logo>img {
+  width: 120px;
+  height: 46px;
+  padding-left: 6px;
+}
+
+#list {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  line-height: 14px;
+  justify-content: space-between;
+}
+
+#visa>img {
+  width: 120px;
+  padding-top: 12px;
+  margin-top: -15%;
+}
+
+#social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ;
+}
+
+#social>img {
+  margin-left: 10px
+}
+
+#city>p {
+  display: flex;
+  word-spacing: 1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+  font-size: 0.860em
+}
+
+#cc {
+  display: flex;
+  justify-content: center;
+}
+
+#app-store {
+  left: 10%;
+  margin-right: -5px;
+}
+
+#listt {
+  left: 10%;
+  margin-right: -90px;
+}
+
+#contact {
+  margin-right: -50px;
+}
+
+#sec {
+  margin-right: -125px;
+  margin-top: -2%;
+}
+
+#app-store>h4 {
+  font-size: 15.48px;
+}
+
+.expe {
+  cursor: pointer;
+}
+
+#last {
+  width: 100%;
+  text-align: center;
+  font-size: 0.860em;
+  line-height: 20px;
+}
