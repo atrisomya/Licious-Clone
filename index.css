@@ -174,6 +174,11 @@ body {
  .category div img{
   margin-right: 10px;
  }
+#logout{
+  display: none;
+}
+
+
  /* Shop by Categories */
 
  #shop_by_cat_pcontainer{
