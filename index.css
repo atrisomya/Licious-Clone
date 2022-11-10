@@ -14,6 +14,7 @@ body {
 }
 .notification-container {
   position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 30%;
@@ -21,7 +22,7 @@ body {
   height: 100%;
   overflow: hidden;
   background: #107b10;
-  z-index: 1;
+  z-index: 5;
   transform: translateX(100%);
   -webkit-transform: translateX(100%);
 }
@@ -190,9 +191,9 @@ body {
     height: auto;
    
 }
-#child_container>div{
+/* #child_container>div{
     /* border: 1px solid black; */
-}
+/* } */ 
 #child_container>div>div{
     /* border: 1px solid red; */
     /* width: 100%; */
@@ -278,4 +279,112 @@ body {
         transform: opacity linear;
     }
     
+}
+
+
+/* products---------------------------------- */
+.product_container{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    margin: auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    
+}
+.product_arr{
+    width: 80%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+}
+.products{
+    min-width: 320px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    margin: auto;
+}
+.products .image_pro{
+    width: 100%;
+    border-radius: 5px;
+}
+.best_seller{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+    margin: 20px 0 10px 8%;
+}
+.title{
+    font-size: 16px;
+    color: grey;
+    margin: 5px;
+    font-weight: bold;
+}
+.desc{
+    font-size: 14px;
+    margin: 10px;
+}
+.product_rate{
+    margin-top: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.product_rate p{
+    color: #d11243;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.product_rate button{
+    padding: 10px;
+    background-color: #d11243;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.delivery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #eaeaea;
+    color: gray;
+}
+.delivery img{
+    width: 24px;
+    margin: 5px;
+}
+.left,
+.right{
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;   
+}
+/* .right{
+    position: absolute;
+    right:0;
+} */
+.left,
+.right p{
+    color: grey;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px 10px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
