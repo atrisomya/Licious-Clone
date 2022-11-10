@@ -394,7 +394,20 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 3;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     
+}
+
+.product_container::-webkit-scrollbar {
+  display: none;
+}
+
+#leftBtn {
+  position: absolute;
+}
+#rightBtn {
+  position: absolute;
 }
 .product_arr{
     width: 80%;
@@ -416,6 +429,7 @@ body {
 .products .image_pro{
     width: 100%;
     border-radius: 5px;
+    overflow: hidden;
 }
 .best_seller{
     font-size: 25px;
