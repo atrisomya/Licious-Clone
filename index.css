@@ -166,7 +166,7 @@ body {
  .category div{
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /*align-items: center;*/
   text-align: center;
   cursor: pointer;
   margin-right: 30px;
@@ -484,4 +484,44 @@ body {
     font-weight: bold;
     padding: 10px 15px 10px 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* -------top section-----------*/
+#top-section {
+  margin: 5px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#top-section > div {
+  display: flex;
+}
+#top-section p {
+  margin-right: 20px;
+}
+
+/* ----------dropdown------------ */
+#dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 15%;
+  margin: auto;
+  z-index: 1;
+  font-size: 16px;
+  padding: 10px;
+}
+li {
+  list-style: none;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 0.5px solid grey;
+  text-align: left;
+}
+li img {
+  width: 10%;
+}
+#category:hover #dropdown{
+  display: block;
 }
