@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
 </head>
 <body>
     <div id="add_product_form">
         <h3>Add Product</h3>
         <input type="text" id="product_id" placeholder="Enter Product ID">
         <input type="text" id="product_name" placeholder="Enter Product Name">
+        <input type="text" id="product_desc" placeholder="Enter Product desc">
         <input type="file" id="product_image" placeholder="Choose Product Image">
         <input type="text" id="product_MRP" placeholder="Enter Product Price">
         <button id="add_product_btn">Add Product</button>
