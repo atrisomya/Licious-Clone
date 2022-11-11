@@ -251,7 +251,6 @@ ref.on("value", function(snapshot) {
 
 const appendProducts = (data)=>{
     let addPro = document.querySelector('.add_product')
-
     data.forEach((el)=>{
         let div = document.createElement("div");
         div.className = 'products'
@@ -274,6 +273,9 @@ const appendProducts = (data)=>{
 
         let cartBtn = document.createElement("button")
         cartBtn.innerText = 'ADD TO CART'
+        cartBtn.addEventListener('click',()=>{
+            addToCart (el);
+        })
 
         rate_div.append(price,cartBtn)
 
@@ -292,7 +294,6 @@ const appendProducts = (data)=>{
         addPro.append(div)
         
         console.log(addPro)
-
     })
 }
 
@@ -326,3 +327,52 @@ function appendCategory(data) {
     })
 }
 
+let total = 0;
+function addToCart (el){
+    let obj = {};
+    let product_cart = JSON.parse(localStorage.getItem('cart_data')) || [];
+    let title = el.name;
+    let price = el.price
+    console.log(title,price);
+    obj = {
+        title,
+        price,
+    };
+    product_cart.push(obj);
+    localStorage.setItem('cart_data',JSON.stringify(product_cart));
+    appendToCart();
+}
+let cart_items = document.querySelector('.cart_item');
+function appendToCart(){
+    
+    cart_items.innerHTML =null;
+    let data = JSON.parse(localStorage.getItem('cart_data')) || [];
+    data.forEach((el)=>{
+        let cart_upper = document.querySelector('#cart_item_upper');
+        let cart_lower = document.querySelector('#cart_item_lower');
+        let cart_item_name = document.createElement('h4');
+        let div = document.createElement('div')
+        let quantity = document.createElement('p');
+        quantity.setAttribute('id', 'cart_item_quantity');
+        quantity.innerText = '1000gms';
+        cart_item_name.setAttribute("id",'cart_item_name');
+        cart_item_name.innerText = el.title;
+        let cart_item_price = document.createElement('p');
+        cart_item_price.setAttribute('id','cart_item_price');
+        cart_item_price.innerText = `Rs.${el.price}`;
+        total += +(el.price);
+        // cart_upper.append(cart_item_name);
+        // cart_lower.append(quantity, cart_item_price);
+        div.append(cart_item_name,quantity,cart_item_price);
+        cart_items.append(div);
+    });
+    let total_cost = document.querySelector('#checkout_cost');
+    total_cost.innerText = `Total: ${total}`;
+    console.log(total);
+    
+}
+let checkout_btn = document.querySelector('#checkout_btn');
+checkout_btn.addEventListener('click',()=>{
+    window.location.href = './checkout.html';
+})
+appendToCart();
