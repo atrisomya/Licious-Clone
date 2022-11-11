@@ -8,9 +8,60 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="./admin.css">
+    <script src="https://kit.fontawesome.com/a5e2fc3f3f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="add_product_form">
+
+
+        <div class="navbar">
+            <img src="https://m.licious.in/image/rebranding/svg/licious-logo.svg" alt="">
+            <h3>Admin Panel</h3>
+            <h3>Hi,Welcome Back Admin</h3>
+        </div>
+
+        <div class="main-container">
+            <div class="sidebar">
+                   <div class="products">
+                    <i class="fa-solid fa-clipboard"></i>
+                    <a href="">Products</a>
+                   </div>
+                   <div class="products">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <a href="">Category</a>
+                   </div>
+                   <div class="products">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <a href="">Manage Orders</a>
+                   </div>
+                   <div class="products">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <a href="">Logout</a>
+                   </div>
+            </div>
+            <div class="main-area">
+                <div class="data_base">
+                    <div class="data total_product">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <p>Total No of Products</p>
+                        <p id="product_count">14</p>
+                    </div>
+                    <div class="data total_categories">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <p>Total No of Categories</p>
+                        <p id="category_count">14</p>
+                    </div>
+                    <div class="data total_orders">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <p>Total No of Orders</p>
+                        <p id="order_count"> 14</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- <div id="add_product_form">
         <h3>Add Product</h3>
         <input type="text" id="product_id" placeholder="Enter Product ID">
         <input type="text" id="product_name" placeholder="Enter Product Name">
@@ -25,7 +76,7 @@
         <input type="text" id="category_name" placeholder="Enter Category Name">
         <input type="file" id="category_image" placeholder="Choose Category Image">
         <button id="add_category_btn">Add Category</button>
-    </div>
+    </div> -->
 </body>
 </html>
 <script src="admin.js"></script>

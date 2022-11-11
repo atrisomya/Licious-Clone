@@ -399,7 +399,7 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 3;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     
 }
 
