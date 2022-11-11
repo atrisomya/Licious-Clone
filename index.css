@@ -404,7 +404,7 @@ body {
 }
 
 .product_container::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 
 #leftBtn {
