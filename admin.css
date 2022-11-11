@@ -111,3 +111,65 @@ background: radial-gradient(circle, rgba(218,218,218,1) 32%, rgba(92,238,229,1) 
 background: radial-gradient(circle, rgba(218,218,218,1) 32%, rgba(206,147,216,1) 73%);
 }
 
+
+.form_head{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 50px;
+    background: rgb(255,247,158);
+    background: radial-gradient(circle, rgba(255,247,158,1) 32%, rgba(236,139,139,1) 73%);
+}
+.form_head button{
+    padding: 10px 20px;
+    color: white;
+    background-color: #ad002b;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.form_head h3{
+    font-size: 25px;
+    font-weight: bold ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    margin-right: 50%;
+}
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.selected:hover{
+    background-color: rgb(52, 52, 168);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #fff;
+    cursor: pointer;
+}
