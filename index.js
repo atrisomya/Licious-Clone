@@ -376,3 +376,4 @@ checkout_btn.addEventListener('click',()=>{
     window.location.href = './checkout.html';
 })
 appendToCart();
+
