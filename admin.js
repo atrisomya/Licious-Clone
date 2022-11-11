@@ -47,6 +47,8 @@ var firebaseConfig = {
      price:price
    })
    alert("saved")
+   let addprodform = document.getElementById('addproductform');
+    addprodform.style.display="none";
 
   }
 
@@ -83,3 +85,17 @@ var firebaseConfig = {
     alert("saved")
 
   }
+
+  let addprodform = document.getElementById('addproductform');
+  
+  let addNewProd = document.getElementById('addNewProd');
+  addNewProd.onclick = () => {
+    
+    addprodform.style.display="block";
+  }
+
+  let close = document.getElementById('closeprodform');
+  close.onclick = () => {
+    addprodform.style.display="none";
+  }
+  

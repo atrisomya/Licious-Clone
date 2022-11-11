@@ -58,25 +58,68 @@
                         <p id="order_count"> 14</p>
                     </div>
                 </div>
+                <div class="form_products">
+                    <div class="form_head">
+                        <h3>Products</h3>
+                        <button id="addNewProd">Add</button>
+                        <div id="addproductform">
+                            <div id="add_product_form">
+                                <h3>Add Product <span id="closeprodform">X</span></h3>
+                                <input type="text" id="product_id" placeholder="Enter Product ID">
+                                <input type="text" id="product_name" placeholder="Enter Product Name">
+                                <input type="text" id="product_desc" placeholder="Enter Product desc">
+                                <input type="file" id="product_image" placeholder="Choose Product Image">
+                                <input type="text" id="product_MRP" placeholder="Enter Product Price">
+                                <button id="add_product_btn">Add Product</button>
+                            </div> 
+                        </div>
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                    <div class="form_rows">
+                        <table class="product_table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="selected">
+                                    <td>product_101</td>
+                                    <td>Chicken Tikka</td>
+                                    <td>This is chicken Tikka</td>
+                                    <td>199</td>
+                                </tr>
+                                <tr class="selected">
+                                    <td>product_101</td>
+                                    <td>Chicken Tikka</td>
+                                    <td>This is chicken Tikka</td>
+                                    <td>199</td>
+                                </tr>
+                                <tr class="selected">
+                                    <td>product_101</td>
+                                    <td>Chicken Tikka</td>
+                                    <td>This is chicken Tikka</td>
+                                    <td>199</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 
-    <!-- <div id="add_product_form">
-        <h3>Add Product</h3>
-        <input type="text" id="product_id" placeholder="Enter Product ID">
-        <input type="text" id="product_name" placeholder="Enter Product Name">
-        <input type="text" id="product_desc" placeholder="Enter Product desc">
-        <input type="file" id="product_image" placeholder="Choose Product Image">
-        <input type="text" id="product_MRP" placeholder="Enter Product Price">
-        <button id="add_product_btn">Add Product</button>
-    </div>
+    
     <div id="add_category_form">
         <h3>Add Category</h3>
         <input type="text" id="category_id" placeholder="Enter Category ID">
         <input type="text" id="category_name" placeholder="Enter Category Name">
         <input type="file" id="category_image" placeholder="Choose Category Image">
         <button id="add_category_btn">Add Category</button>
-    </div> -->
+    </div>
 </body>
 </html>
 <script src="admin.js"></script>

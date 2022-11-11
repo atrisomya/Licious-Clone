@@ -38,6 +38,7 @@ body{
     display: flex;
     flex-direction: column;
     /* background-color: red; */
+    position: relative;
 }
 .products{
     display: flex;
@@ -111,3 +112,116 @@ background: radial-gradient(circle, rgba(218,218,218,1) 32%, rgba(92,238,229,1) 
 background: radial-gradient(circle, rgba(218,218,218,1) 32%, rgba(206,147,216,1) 73%);
 }
 
+.form_head {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background: rgb(255,247,158);
+background: radial-gradient(circle, rgba(255,247,158,1) 32%, rgba(236,139,139,1) 73%);
+}
+
+.form_head button{
+    padding: 10px 20px;
+    background-color: #db1e4d;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+.form_head h3 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    margin-right: 50%;
+}
+
+.product_table {
+    margin: 25px 0px;
+    font-size: 1em;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.product_table thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+.product_table th, .product_table td {
+    padding: 12px 15px;
+} 
+
+.product_table tbody tr {
+    border: 1px solid #dddddd;
+}
+.product_table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.selected:hover {
+    background-color: rgb(52, 52, 168);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#addproductform {
+    display: none;
+    position: absolute;
+    height: 450px;
+    width: 350px;
+    background-color: white;
+    z-index: 2;
+    margin: auto;
+    margin-left: 22%;
+    margin-top: 14%;
+    border: 1px solid black;
+    /* transform: translateX(-50%); */
+}
+#add_product_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#add_product_form > h3 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px;
+    /* background-color: #009879; */
+}
+
+input {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+}
+#product_image {
+    margin-left: 20%;
+    margin-top: 15px;
+    border: none;
+}
+
+#add_product_btn {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#add_product_form span {
+    margin-left: 100px;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    cursor: pointer;
+}
