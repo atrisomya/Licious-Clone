@@ -267,3 +267,34 @@ const appendProducts = (data)=>{
 
     })
 }
+
+//-------------add categories function------------------
+
+var ref = firebase.database().ref('category/');
+
+ref.on("value", function(snapshot) {
+//    console.log(snapshot.val());
+   let category_data = snapshot.val();
+   var newArrCat = Object.values(category_data)
+   console.log(newArrCat)
+
+   appendCategory(newArrCat)
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+
+
+function appendCategory(data) {
+    let cat = document.getElementById('shop_by_cat_ccontainer');
+
+    data.forEach((el)=> {
+        let div = document.createElement('div');
+        let catImg = document.createElement('img');
+        catImg.src = el.image;
+        let h3 = document.createElement('h3');
+        h3.innerText=el.name;
+        div.append(catImg, h3);
+        cat.append(div);
+    })
+}
+
