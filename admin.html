@@ -8,17 +8,111 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="./admin.css">
+    <script src="https://kit.fontawesome.com/a5e2fc3f3f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="add_product_form">
-        <h3>Add Product</h3>
-        <input type="text" id="product_id" placeholder="Enter Product ID">
-        <input type="text" id="product_name" placeholder="Enter Product Name">
-        <input type="text" id="product_desc" placeholder="Enter Product desc">
-        <input type="file" id="product_image" placeholder="Choose Product Image">
-        <input type="text" id="product_MRP" placeholder="Enter Product Price">
-        <button id="add_product_btn">Add Product</button>
-    </div>
+
+
+        <div class="navbar">
+            <img src="https://m.licious.in/image/rebranding/svg/licious-logo.svg" alt="">
+            <h3>Admin Panel</h3>
+            <h3>Hi,Welcome Back Admin</h3>
+        </div>
+
+        <div class="main-container">
+            <div class="sidebar">
+                   <div class="products">
+                    <i class="fa-solid fa-clipboard"></i>
+                    <a href="">Products</a>
+                   </div>
+                   <div class="products">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <a href="">Category</a>
+                   </div>
+                   <div class="products">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <a href="">Manage Orders</a>
+                   </div>
+                   <div class="products">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <a href="">Logout</a>
+                   </div>
+            </div>
+            <div class="main-area">
+                <div class="data_base">
+                    <div class="data total_product">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <p>Total No of Products</p>
+                        <p id="product_count">14</p>
+                    </div>
+                    <div class="data total_categories">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <p>Total No of Categories</p>
+                        <p id="category_count">14</p>
+                    </div>
+                    <div class="data total_orders">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <p>Total No of Orders</p>
+                        <p id="order_count"> 14</p>
+                    </div>
+                </div>
+                <div class="form_products">
+                    <div class="form_head">
+                        <h3>Products</h3>
+                        <button id="addNewProd">Add</button>
+                        <div id="addproductform">
+                            <div id="add_product_form">
+                                <h3>Add Product <span id="closeprodform">X</span></h3>
+                                <input type="text" id="product_id" placeholder="Enter Product ID">
+                                <input type="text" id="product_name" placeholder="Enter Product Name">
+                                <input type="text" id="product_desc" placeholder="Enter Product desc">
+                                <input type="file" id="product_image" placeholder="Choose Product Image">
+                                <input type="text" id="product_MRP" placeholder="Enter Product Price">
+                                <button id="add_product_btn">Add Product</button>
+                            </div> 
+                        </div>
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                    <div class="form_rows">
+                        <table class="product_table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="selected">
+                                    <td>product_101</td>
+                                    <td>Chicken Tikka</td>
+                                    <td>This is chicken Tikka</td>
+                                    <td>199</td>
+                                </tr>
+                                <tr class="selected">
+                                    <td>product_101</td>
+                                    <td>Chicken Tikka</td>
+                                    <td>This is chicken Tikka</td>
+                                    <td>199</td>
+                                </tr>
+                                <tr class="selected">
+                                    <td>product_101</td>
+                                    <td>Chicken Tikka</td>
+                                    <td>This is chicken Tikka</td>
+                                    <td>199</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
     <div id="add_category_form">
         <h3>Add Category</h3>
         <input type="text" id="category_id" placeholder="Enter Category ID">
