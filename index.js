@@ -1,3 +1,13 @@
+// let catdrop = document.getElementById('catdrop');
+// catdrop.onclick = () => {
+//     if(dropdown.display="none") {
+//         dropdown.style.display="block";
+//     } else {
+//         dropdown.style.display="block";
+//     }
+// }
+
+
 // ------------Login/Register Authentication---------
 var firebaseConfig = {
     apiKey: "AIzaSyArOWepcR7-UZcu1v1Cm4DTugXhFvIGhtA",
