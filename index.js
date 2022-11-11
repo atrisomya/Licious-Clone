@@ -100,6 +100,24 @@ $('#showFilePanel').click(function(event) {
     event.preventDefault();
   });
 
+//   Cart
+
+$('#showFilePanelCart').click(function(event) {
+    if ($('.cart-notification-container').hasClass('cart-dismiss')) {
+      $('.cart-notification-container').removeClass('cart-dismiss').addClass('cart-selected').show();
+    }
+    event.preventDefault();
+  });
+ 
+  $('#closeFilePanelCart').click(function(event) {
+    if ($('.cart-notification-container').hasClass('cart-selected')) {
+      $('.cart-notification-container').removeClass('cart-selected').addClass('cart-dismiss');
+    }
+    event.preventDefault();
+  });
+
+// 
+
 // --------logout-----------------
   let logout = document.getElementById('logout')
   logout.addEventListener('click',()=>{
@@ -203,3 +221,5 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+
