@@ -401,13 +401,13 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 3;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     
 }
 
 .product_container::-webkit-scrollbar {
-  display: none;
+  /* display: */
+  overflow: auto;
 }
 
 #leftBtn {

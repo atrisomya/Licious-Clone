@@ -1,3 +1,13 @@
+// let catdrop = document.getElementById('catdrop');
+// catdrop.onclick = () => {
+//     if(dropdown.display="none") {
+//         dropdown.style.display="block";
+//     } else {
+//         dropdown.style.display="block";
+//     }
+// }
+
+
 // ------------Login/Register Authentication---------
 var firebaseConfig = {
     apiKey: "AIzaSyArOWepcR7-UZcu1v1Cm4DTugXhFvIGhtA",
@@ -205,21 +215,114 @@ function moveToPrevSlide(){
 
 //Slider for Best Selllers 
 
-const productContainers = [...document.querySelectorAll('.product-container')];
-const nextBtn = [...document.querySelectorAll('#leftBtn')];
-const rightBtn = [...document.querySelectorAll('#rightBtn')];
+// const productContainers = [...document.querySelectorAll('.product-container')];
+// const nextBtn = [...document.querySelectorAll('#leftBtn')];
+// const rightBtn = [...document.querySelectorAll('#rightBtn')];
 
-productContainers.forEach((item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
+// productContainers.forEach((item, i) => {
+//     let containerDimensions = item.getBoundingClientRect();
+//     let containerWidth = containerDimensions.width;
 
-    rightBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;
-    })
+//     rightBtn[i].addEventListener('click', () => {
+//         item.scrollLeft += containerWidth;
+//     })
 
-    leftBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
-    })
+//     leftBtn[i].addEventListener('click', () => {
+//         item.scrollLeft -= containerWidth;
+//     })
+// })
+
+
+
+
+// ---------------------
+var ref = firebase.database().ref('products/');
+
+ref.on("value", function(snapshot) {
+//    console.log(snapshot.val());
+   let product_data = snapshot.val();
+   var newArr = Object.values(product_data)
+   console.log(newArr)
+
+   appendProducts(newArr)
+}, function (error) {
+   console.log("Error: " + error.code);
 })
 
+const appendProducts = (data)=>{
+    let addPro = document.querySelector('.add_product')
+
+    data.forEach((el)=>{
+        let div = document.createElement("div");
+        div.className = 'products'
+        let img = document.createElement('img')
+        img.className ='image_pro'
+        img.src = el.image
+        
+        let title = document.createElement("p")
+        title.className = 'title'
+        title.innerText = el.name
+
+        let desc = document.createElement("p")
+        desc.className = 'desc'
+        desc.innerText = el.desc
+
+        let rate_div = document.createElement('div')
+        rate_div.className = 'product_rate'
+        let price = document.createElement('p')
+        price.innerText = `MRP: ₹ ${el.price}`
+
+        let cartBtn = document.createElement("button")
+        cartBtn.innerText = 'ADD TO CART'
+
+        rate_div.append(price,cartBtn)
+
+        let del_div = document.createElement("div")
+        del_div.className = 'delivery'
+
+        let del_img = document.createElement("img")
+        del_img.src = 'https://m.licious.in/image/rebranding/png/Scooter_express.png'
+
+        let day = document.createElement('p')
+        day.innerText = 'Tomorrow 6 AM - 9 AM'
+        del_div.append(del_img,day)
+
+        div.append(img,title,desc,rate_div,del_div)
+        
+        addPro.append(div)
+        
+        console.log(addPro)
+
+    })
+}
+
+//-------------add categories function------------------
+
+var ref = firebase.database().ref('category/');
+
+ref.on("value", function(snapshot) {
+//    console.log(snapshot.val());
+   let category_data = snapshot.val();
+   var newArrCat = Object.values(category_data)
+   console.log(newArrCat)
+
+   appendCategory(newArrCat)
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+
+
+function appendCategory(data) {
+    let cat = document.getElementById('shop_by_cat_ccontainer');
+
+    data.forEach((el)=> {
+        let div = document.createElement('div');
+        let catImg = document.createElement('img');
+        catImg.src = el.image;
+        let h3 = document.createElement('h3');
+        h3.innerText=el.name;
+        div.append(catImg, h3);
+        cat.append(div);
+    })
+}
 
