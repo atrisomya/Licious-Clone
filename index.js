@@ -348,8 +348,8 @@ function appendToCart(){
     cart_items.innerHTML =null;
     let data = JSON.parse(localStorage.getItem('cart_data')) || [];
     data.forEach((el)=>{
-        let cart_upper = document.querySelector('#cart_item_upper');
-        let cart_lower = document.querySelector('#cart_item_lower');
+        // let cart_upper = document.querySelector('#cart_item_upper');
+        // let cart_lower = document.querySelector('#cart_item_lower');
         let cart_item_name = document.createElement('h4');
         let div = document.createElement('div')
         let quantity = document.createElement('p');
@@ -365,10 +365,18 @@ function appendToCart(){
         // cart_lower.append(quantity, cart_item_price);
         div.append(cart_item_name,quantity,cart_item_price);
         cart_items.append(div);
+
     });
     let total_cost = document.querySelector('#checkout_cost');
     total_cost.innerText = `Total: ${total}`;
-    console.log(total);
+    
+
+    let sub_total = document.querySelector('#sub_total');
+    sub_total.innerText = total;
+
+    let total_price = document.querySelector('#total_price');
+    total_price.innerText = total;
+    // console.log(total_price);
     
 }
 let checkout_btn = document.querySelector('#checkout_btn');
