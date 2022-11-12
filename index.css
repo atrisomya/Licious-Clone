@@ -213,7 +213,7 @@ body {
   width: 100%;
 }
 #shop_by_cat_ccontainer>div>img:hover{
-  transform: scale(1.2);
+  transform: scale(1.05);
   transition: transform .5s;
 }
 
@@ -273,7 +273,7 @@ body {
   width: 100%;
 }
 #explore_by_cat_ccontainer>div>img:hover{
-  transform: scale(1.2);
+  transform: scale(1.05);
   transition: transform .5s;
 }
 
@@ -547,9 +547,13 @@ li img {
 }
 
 /* Footer */
-.big {
+#big {
+  border: 1px solid brown;
+  width: 77.5%;
+  margin: auto;
   padding: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -560,19 +564,27 @@ li img {
 }
 
 #logo>img {
+  /* border: 1px solid red; */
   width: 120px;
-  height: 46px;
+  height: auto;
   padding-left: 6px;
 }
 
 #list {
+  /* border: 1px solid green; */
+  width: 100%;
   margin-top: 15px;
   display: flex;
   justify-content: center;
+  
   line-height: 14px;
   justify-content: space-between;
 }
-
+#visa{
+  /* border: 1px solid green; */
+  
+  
+}
 #visa>img {
   width: 120px;
   padding-top: 12px;
@@ -599,30 +611,43 @@ li img {
 }
 
 #cc {
+  
   display: flex;
   justify-content: center;
 }
 
 #app-store {
   left: 10%;
-  margin-right: -5px;
+  line-height: 25px;
+  /* margin-right: -5px; */
 }
 
 #listt {
+  /* border: 1px solid red; */
+  line-height: 25px;
+  width: 20%;
+  height: auto;
   left: 10%;
-  margin-right: -90px;
+  /* margin-right: -90px; */
+
 }
 
 #contact {
-  margin-right: -50px;
+  /* border: 1px solid rebeccapurple; */
+  line-height: 25px;
+  /* margin-right: -50px; */
 }
 
 #sec {
-  margin-right: -125px;
-  margin-top: -2%;
+  /* border: 1 px solid brown; */
+  width: 10%;
+  line-height: 25px;
+  /* margin-right: -125px; */
+  /* margin-top: -2%; */
 }
 
 #app-store>h4 {
+  /* border: 1px solid black; */
   font-size: 15.48px;
 }
 
