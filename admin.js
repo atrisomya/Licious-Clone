@@ -132,6 +132,7 @@ const deletePro=()=>{
     })
 
     alert("saved")
+    addcategoryform.style.display="none";
 
   }
 
@@ -172,3 +173,108 @@ const deletePro=()=>{
     delprodform.style.display="none";
   }
   
+
+  let catvis = document.getElementById('category');
+catvis.addEventListener('click', () => {
+  categoryfun();
+});
+
+
+let prodvis = document.getElementById('products');
+prodvis.onclick = () => {
+  product_visibility();
+}
+function categoryfun() {
+  let categoryclass = document.querySelector('.form_category');
+  let formprod = document.querySelector('.form_products');
+  formprod.style.display="none";
+  categoryclass.style.display="block";
+  
+}
+
+function product_visibility() {
+  let categoryclass = document.querySelector('.form_category');
+  let formprod = document.querySelector('.form_products');
+  formprod.style.display="block";
+  categoryclass.style.display="none";
+}
+
+let addNewCat = document.getElementById('addNewCat');
+addNewCat.onclick = () => {
+  catformvisibility();
+}
+
+function catformvisibility() {
+  let categoryform = document.getElementById('addcategoryform');
+  categoryform.style.display="block";
+}
+
+let addcategoryform = document.getElementById('addcategoryform');
+let addcatclose = document.querySelector('.closecatform');
+  addcatclose.onclick = () => {
+    addcategoryform.style.display="none";
+  }
+  let upate_category_form = document.getElementById('update_category_form');
+  let updclosecat = document.querySelector('.closecatupdform');
+  updclosecat.onclick = () => {
+    upate_category_form.style.display="none";
+  }
+  let delete_category_form = document.getElementById('delete_category_form');
+  let delcatclose = document.querySelector('.closecatdelform');
+  delcatclose.onclick = () => {
+    delete_category_form.style.display="none";
+  }
+  
+
+  let catupdate = document.getElementById('update_cur_cat');
+  catupdate.onclick = () => {
+    catupdatevis();
+  }
+
+  function catupdatevis() {
+    upate_category_form.style.display="block";
+  }
+
+  let catdel = document.getElementById('delete_cur_cat');
+  catdel.onclick = () => {
+    delete_category_form.style.display="block";
+  }
+
+  const updateCat = ()=>{
+    let id = document.getElementById('update_category_id').value
+    let name = document.getElementById("update_category_name").value
+
+    // console.log(act_img)
+
+    var updates={
+      id:id,
+     name:name,
+    }
+    console.log(updates)
+   database.ref('category/' + id).update(updates)
+      alert("Data Updated SuccessFully")
+      let updatecatform = document.getElementById('update_category_form');
+      updatecatform.style.display="none";
+
+  }
+
+  let catupdbtn = document.getElementById('add_update_btn_cat');
+  catupdbtn.onclick = () => {
+    updateCat();
+  }
+
+  const deleteCat=()=>{
+    let id = document.getElementById("del_cat_id").value
+    console.log(id)
+    database.ref(`/category/${id}`).remove();
+  
+    alert("Category Deleted")
+  
+    let del_category_form = document.getElementById("delete_category_form")
+    del_category_form.style.display="none";
+  }
+
+  let catdelbtn = document.getElementById('add_delete_cat_btn');
+  catdelbtn.onclick = () => {
+    deleteCat();
+  }
