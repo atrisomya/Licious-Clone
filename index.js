@@ -23,7 +23,6 @@ var firebaseConfig = {
 
   const auth = firebase.auth();
 
-
 let login = document.getElementById('login')
 login.addEventListener('click',()=>{
     userLogin();
@@ -31,7 +30,6 @@ login.addEventListener('click',()=>{
 const userLogin=()=>{
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
-
     auth.signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
@@ -331,41 +329,50 @@ let total = 0;
 function addToCart (el){
     let obj = {};
     let product_cart = JSON.parse(localStorage.getItem('cart_data')) || [];
-    let title = el.name;
+    var user_email = document.getElementById("showFilePanel").innerText;
+    if(user_email !== "Login"){
+        let title = el.name;
     let price = el.price
     console.log(title,price);
     obj = {
+        user_email,
         title,
         price,
     };
     product_cart.push(obj);
     localStorage.setItem('cart_data',JSON.stringify(product_cart));
     appendToCart();
+    }
+    else{
+        alert("Login first");
+        $('.cart-notification-container').removeClass('cart-selected').addClass('cart-dismiss');
+    }
 }
 let cart_items = document.querySelector('.cart_item');
 function appendToCart(){
-    
     cart_items.innerHTML =null;
     let data = JSON.parse(localStorage.getItem('cart_data')) || [];
     data.forEach((el)=>{
         // let cart_upper = document.querySelector('#cart_item_upper');
         // let cart_lower = document.querySelector('#cart_item_lower');
-        let cart_item_name = document.createElement('h4');
-        let div = document.createElement('div')
-        let quantity = document.createElement('p');
-        quantity.setAttribute('id', 'cart_item_quantity');
-        quantity.innerText = '1000gms';
-        cart_item_name.setAttribute("id",'cart_item_name');
-        cart_item_name.innerText = el.title;
-        let cart_item_price = document.createElement('p');
-        cart_item_price.setAttribute('id','cart_item_price');
-        cart_item_price.innerText = `Rs.${el.price}`;
-        total += +(el.price);
-        // cart_upper.append(cart_item_name);
-        // cart_lower.append(quantity, cart_item_price);
-        div.append(cart_item_name,quantity,cart_item_price);
-        cart_items.append(div);
-
+        var user_email = document.getElementById("showFilePanel").innerText;
+        if(el.user_email === user_email){
+            let cart_item_name = document.createElement('h4');
+            let div = document.createElement('div')
+            let quantity = document.createElement('p');
+            quantity.setAttribute('id', 'cart_item_quantity');
+            quantity.innerText = '1000gms';
+            cart_item_name.setAttribute("id",'cart_item_name');
+            cart_item_name.innerText = el.title;
+            let cart_item_price = document.createElement('p');
+            cart_item_price.setAttribute('id','cart_item_price');
+            cart_item_price.innerText = `Rs.${el.price}`;
+            total += +(el.price);
+            // cart_upper.append(cart_item_name);
+            // cart_lower.append(quantity, cart_item_price);
+            div.append(cart_item_name,quantity,cart_item_price);
+            cart_items.append(div);
+        }
     });
     let total_cost = document.querySelector('#checkout_cost');
     total_cost.innerText = `Total: ${total}`;
@@ -383,5 +390,4 @@ let checkout_btn = document.querySelector('#checkout_btn');
 checkout_btn.addEventListener('click',()=>{
     window.location.href = './checkout.html';
 })
-appendToCart();
 
