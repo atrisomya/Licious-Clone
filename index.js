@@ -7,6 +7,8 @@
 //     }
 // }
 
+var current_user = document.getElementById("showFilePanel").innerText;
+localStorage.setItem('currentUser',JSON.stringify(current_user));
 
 // ------------Login/Register Authentication---------
 var firebaseConfig = {
@@ -31,6 +33,7 @@ const userLogin=()=>{
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
     auth.signInWithEmailAndPassword(email, password)
+    
     .then((userCredential) => {
       const user = userCredential.user;
       window.alert("Success! Welcome back!");
@@ -43,6 +46,8 @@ const userLogin=()=>{
       name.style.fontWeight ='bold'
       let logout = document.getElementById('logout')
       logout.style.display='flex'
+      var current_user = document.getElementById("showFilePanel").innerText;
+      localStorage.setItem('currentUser',JSON.stringify(current_user));
 
     })
     .catch((error) => {
@@ -331,7 +336,7 @@ function addToCart (el){
     let product_cart = JSON.parse(localStorage.getItem('cart_data')) || [];
     var user_email = document.getElementById("showFilePanel").innerText;
     if(user_email !== "Login"){
-        let title = el.name;
+    let title = el.name;
     let price = el.price
     console.log(title,price);
     obj = {
@@ -389,5 +394,7 @@ function appendToCart(){
 let checkout_btn = document.querySelector('#checkout_btn');
 checkout_btn.addEventListener('click',()=>{
     window.location.href = './checkout.html';
-})
+});
+
+
 
