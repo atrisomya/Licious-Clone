@@ -12,7 +12,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var database = firebase.database()
-
+// add new products -------------------------------------
   let addProduct = document.getElementById('add_product_btn')
   addProduct.addEventListener('click',()=>{
     addPro();
@@ -38,7 +38,7 @@ var firebaseConfig = {
     image_url = data.data.display_url;
     // console.log(image_url)
     let price = document.getElementById("product_MRP").value
-    console.log(act_img)
+    // console.log(act_img)
    database.ref('products/' + id).set({
      id:id,
      name:name,
@@ -52,6 +52,55 @@ var firebaseConfig = {
 
   }
 
+
+// update products-------------------------------------
+let updateProduct = document.getElementById('add_update_btn')
+  updateProduct.addEventListener('click',()=>{
+    updatePro();
+  })
+
+  const updatePro = ()=>{
+    let id = document.getElementById('update_product_id').value
+    let name = document.getElementById("update_product_name").value
+    let desc = document.getElementById("update_product_desc").value
+    let price = document.getElementById("update_product_MRP").value
+    // console.log(act_img)
+
+    var updates={
+      id:id,
+     name:name,
+     desc:desc,
+     price:price
+    }
+    console.log(updates)
+   database.ref('products/' + id).update(updates)
+      alert("Data Updated SuccessFully")
+      let updateprodform = document.getElementById('update_product_form');
+      updateprodform.style.display="none";
+
+  }
+//  -----------delete product------------------------
+
+let delProduct = document.getElementById("add_delete_btn")
+
+delProduct.addEventListener("click",()=>{
+  deletePro();
+})
+
+const deletePro=()=>{
+  let id = document.getElementById("del_product_id").value
+  console.log(id)
+  database.ref(`/products/${id}`).remove();
+
+  alert("Product Deleted")
+
+  let del_product_form = document.getElementById("delete_product_form")
+  del_product_form.style.display="none";
+}
+
+
+//  -----------delete product------------------------
+  // add new category--------------------------------------------
   let category = document.getElementById('add_category_btn')
 
   category.addEventListener('click',()=>{
@@ -87,15 +136,39 @@ var firebaseConfig = {
   }
 
   let addprodform = document.getElementById('addproductform');
+  let updateprodform = document.getElementById('update_product_form');
+  let delprodform = document.getElementById('delete_product_form');
   
   let addNewProd = document.getElementById('addNewProd');
   addNewProd.onclick = () => {
-    
+    updateprodform.style.display="none";
+    delprodform.style.display="none";
     addprodform.style.display="block";
   }
-
-  let close = document.getElementById('closeprodform');
-  close.onclick = () => {
+  let update_prod = document.getElementById('update_cur_prod');
+  update_prod.onclick = () => {
     addprodform.style.display="none";
+    delprodform.style.display="none";
+    updateprodform.style.display="block";
+  }
+
+  let delProd = document.getElementById('delete_cur_prod');
+  delProd.onclick = () => {
+    addprodform.style.display="none";
+    updateprodform.style.display="none";
+    delprodform.style.display="block";
+  }
+
+  let addclose = document.querySelector('.closeprodform');
+  addclose.onclick = () => {
+    addprodform.style.display="none";
+  }
+  let updclose = document.querySelector('.closeupdform');
+  updclose.onclick = () => {
+    updateprodform.style.display="none";
+  }
+  let delclose = document.querySelector('.closedelform');
+  delclose.onclick = () => {
+    delprodform.style.display="none";
   }
   

@@ -64,7 +64,7 @@
                         <button id="addNewProd">Add</button>
                         <div id="addproductform">
                             <div id="add_product_form">
-                                <h3>Add Product <span id="closeprodform">X</span></h3>
+                                <h3>Add Product <span class="closeprodform">X</span></h3>
                                 <input type="text" id="product_id" placeholder="Enter Product ID">
                                 <input type="text" id="product_name" placeholder="Enter Product Name">
                                 <input type="text" id="product_desc" placeholder="Enter Product desc">
@@ -73,8 +73,25 @@
                                 <button id="add_product_btn">Add Product</button>
                             </div> 
                         </div>
-                        <button>Update</button>
-                        <button>Delete</button>
+                        <button id="update_cur_prod">Update</button>
+                        <div id="update_product_form">
+                            <div id="add_product_form">
+                                <h3>Update Product <span class="closeupdform">X</span></h3>
+                                <input type="text" id="update_product_id" placeholder="Enter Product ID">
+                                <input type="text" id="update_product_name" placeholder="Enter Product Name">
+                                <input type="text" id="update_product_desc" placeholder="Enter Product desc">
+                                <input type="text" id="update_product_MRP" placeholder="Enter Product Price">
+                                <button id="add_update_btn">Update Product</button>
+                            </div> 
+                        </div>
+                        <button id="delete_cur_prod">Delete</button>
+                        <div id="delete_product_form">
+                            <div id="add_product_form">
+                                <h3>Delete Product <span class="closedelform">X</span></h3>
+                                <input type="text" id="del_product_id" placeholder="Enter Product ID">
+                                <button id="add_delete_btn">Delete Product</button>
+                            </div> 
+                        </div>
                     </div>
                     <div class="form_rows">
                         <table class="product_table">
