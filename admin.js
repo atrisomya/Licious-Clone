@@ -185,18 +185,18 @@ prodvis.onclick = () => {
   product_visibility();
 }
 function categoryfun() {
-  let categoryclass = document.querySelector('.form_category');
   let formprod = document.querySelector('.form_products');
   formprod.style.display="none";
+  let categoryclass = document.querySelector('.form_category');
   categoryclass.style.display="block";
   
 }
 
 function product_visibility() {
   let categoryclass = document.querySelector('.form_category');
+  categoryclass.style.display="none";
   let formprod = document.querySelector('.form_products');
   formprod.style.display="block";
-  categoryclass.style.display="none";
 }
 
 let addNewCat = document.getElementById('addNewCat');
@@ -278,3 +278,53 @@ let addcatclose = document.querySelector('.closecatform');
   catdelbtn.onclick = () => {
     deleteCat();
   }
+
+  var ref = firebase.database().ref('category/');
+
+ref.on("value", function(snapshot) {
+//    console.log(snapshot.val());
+   let category_data = snapshot.val();
+   var newArrCat = Object.values(category_data)
+   let cat_count = document.getElementById('category_count')
+   cat_count.innerText = newArrCat.length
+   console.log(newArrCat.length)
+
+  //  appendCategory(newArrCat)
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+  var ref = firebase.database().ref('products/');
+
+ref.on("value", function(snapshot) {
+//    console.log(snapshot.val());
+   let category_data = snapshot.val();
+   var newArrCat = Object.values(category_data)
+   let pro_count = document.getElementById('product_count')
+   pro_count.innerText = newArrCat.length
+   console.log(newArrCat.length)
+   let tab_body = document.getElementById('table-rows')
+   tab_body.innerHTML = ""
+   newArrCat.forEach((el)=>{
+      
+      let row = document.createElement('tr')
+      row.className = 'selected'
+      let id = document.createElement('td')
+      id.innerText = el.id;
+      let name = document.createElement('td')
+      name.innerText = el.name
+      let desc = document.createElement('td')
+      desc.innerText = el.desc
+      let price = document.createElement('td')
+      price.innerText = el.price
+      row.append(id,name,desc,price)
+
+      tab_body.append(row)
+
+
+      console.log(row)
+   })
+
+  //  appendCategory(newArrCat)
+}, function (error) {
+   console.log("Error: " + error.code);
+});
