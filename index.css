@@ -398,14 +398,16 @@ body {
     margin: 10px 0 10px 0;
     margin: auto;
     margin-bottom: 20px;
-    overflow: hidden;
     position: relative;
-    z-index: 3;
-    /* scroll-behavior: smooth; */
-    
+    z-index: 3;  
+}
+.add_product{
+  max-width: 95%;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
-.product_container::-webkit-scrollbar {
+.add_product::-webkit-scrollbar {
   display: none;
 }
 
