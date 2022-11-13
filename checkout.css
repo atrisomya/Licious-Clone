@@ -164,3 +164,162 @@
   #name_on_card{
     width: 89%;
   }
+
+  /* Footer */
+#big {
+  width: 87%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #4a4a72;
+}
+
+#logo {
+  width: 80%;
+  /* height: 1200px; */
+  /* border: 1px solid black; */
+}
+
+#logo>img {
+  /* border: 1px solid red; */
+  width: 120px;
+  height: auto;
+  padding-left: 6px;
+}
+
+#list {
+  /* border: 1px solid green; */
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  
+  line-height: 14px;
+  justify-content: space-between;
+}
+#visa>img {
+  width: 120px;
+  padding-top: 12px;
+  margin-top: -15%;
+}
+
+#social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ;
+}
+
+#social>img {
+  margin-left: 10px
+}
+
+#city>p {
+  display: flex;
+  word-spacing: 1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+  font-size: 0.860em
+}
+div>h4{
+  margin: 5px 0px 10px 0px;
+}
+#footer_chick+p{
+  display: flex;
+  
+  word-spacing: 0.3rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_mutton+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_fish+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_ready+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_exotic+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_spreads+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_kebabs+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#cc {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#app-store {
+  left: 10%;
+  line-height: 25px;
+  /* margin-right: -5px; */
+}
+
+#listt {
+  /* border: 1px solid red; */
+  line-height: 25px;
+  width: 15%;
+  height: auto;
+  left: 10%;
+  
+  /* margin-right: -90px; */
+
+}
+
+#contact {
+  /* border: 1px solid rebeccapurple; */
+  line-height: 25px;
+  /* margin-right: -50px; */
+}
+
+#sec {
+  /* border: 1 px solid brown; */
+  width: 10%;
+  line-height: 25px;
+  /* margin-right: -125px; */
+  /* margin-top: -2%; */
+}
+
+#app-store>h4 {
+  /* border: 1px solid black; */
+  font-size: 15.48px;
+}
+
+.expe {
+  cursor: pointer;
+}
+
+#last {
+  width: 100%;
+  text-align: center;
+  /* font-size: 0.860em; */
+  line-height: 20px;
+  padding-top: 10px;
+}

@@ -356,6 +356,7 @@ function addToCart (el){
 let cart_items = document.querySelector('.cart_item');
 function appendToCart(){
     cart_items.innerHTML =null;
+    total = 0;
     let data = JSON.parse(localStorage.getItem('cart_data')) || [];
     data.forEach((el)=>{
         // let cart_upper = document.querySelector('#cart_item_upper');
@@ -388,13 +389,11 @@ function appendToCart(){
 
     let total_price = document.querySelector('#total_price');
     total_price.innerText = total;
-    // console.log(total_price);
+    localStorage.setItem('cart_total',JSON.stringify(total));
     
-}
+};
 let checkout_btn = document.querySelector('#checkout_btn');
 checkout_btn.addEventListener('click',()=>{
     window.location.href = './checkout.html';
 });
-
-
-
+appendToCart();
