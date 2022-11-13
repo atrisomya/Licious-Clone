@@ -41,31 +41,31 @@ function saveAddress(event){
     document.querySelector('name').value = "";
 }
 
-let paybutton = document.querySelector('#pay_btn');
-paybutton.addEventListener('click', paymentDone);
+// let paybutton = document.querySelector('#pay_btn');
+// paybutton.addEventListener('click', paymentDone);
 
 
 
-function paymentDone(event){
-    event.preventDefault();
-    let location = document.querySelector('location').value;
-    let location_street = document.querySelector('location_street').value;
-    let landmark = document.querySelector('landmark').value;
-    let city = document.querySelector('city').value;
-    let mobile = document.querySelector('mobile').value;
-    let email = document.querySelector('email').value;
-    let name = document.querySelector('name').value;
-    obj={
-        location, location_street,landmark,city,mobile,email,name
-    }
-    data.push(obj);
-    localStorage.setItem('address_data',JSON.stringify(data));
-    alert("Added successfully");
-    document.querySelector('location').value = "";
-    document.querySelector('location_street').value = "";
-    document.querySelector('landmark').value = "";
-    document.querySelector('city').value = "";
-    document.querySelector('mobile').value = "";
-    document.querySelector('email').value = "";
-    document.querySelector('name').value = "";
-}
+// function paymentDone(event){
+//     event.preventDefault();
+//     let location = document.querySelector('location').value;
+//     let location_street = document.querySelector('location_street').value;
+//     let landmark = document.querySelector('landmark').value;
+//     let city = document.querySelector('city').value;
+//     let mobile = document.querySelector('mobile').value;
+//     let email = document.querySelector('email').value;
+//     let name = document.querySelector('name').value;
+//     obj={
+//         location, location_street,landmark,city,mobile,email,name
+//     }
+//     data.push(obj);
+//     localStorage.setItem('address_data',JSON.stringify(data));
+//     alert("Added successfully");
+//     document.querySelector('location').value = "";
+//     document.querySelector('location_street').value = "";
+//     document.querySelector('landmark').value = "";
+//     document.querySelector('city').value = "";
+//     document.querySelector('mobile').value = "";
+//     document.querySelector('email').value = "";
+//     document.querySelector('name').value = "";
+// }
