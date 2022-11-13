@@ -560,7 +560,12 @@ li img {
   justify-content: center;
   color: #4a4a72;
 }
-
+.logo {
+  width: 12%;
+}
+.logo img {
+  width:100%;
+}
 #logo {
   width: 80%;
   /* height: 1200px; */
@@ -583,11 +588,6 @@ li img {
   
   line-height: 14px;
   justify-content: space-between;
-}
-#visa{
-  /* border: 1px solid green; */
-  
-  
 }
 #visa>img {
   width: 120px;
