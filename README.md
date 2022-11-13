@@ -8,9 +8,9 @@ Member 1: fp06_443 - Ankit Kumar
 
 Member 2: fw19_0629 - Rakesh Patil
 
-Member 3: fw21_0803 - yogendra singh verma
+Member 3: fw21_0803 - Yogendra Singh Verma
 
-Member 4: fw21_0902 - mahendra pratap singh
+Member 4: fw21_0902 - Mahendra Pratap Singh
 
 Project Name: Delicious
 
