@@ -407,3 +407,14 @@ checkout_btn.addEventListener('click',()=>{
     window.location.href = './checkout.html';
 });
 appendToCart();
+
+
+let element = document.querySelector(".add_product")
+element.addEventListener('wheel', (event) => {
+    event.preventDefault();
+  
+    element.scrollBy({
+      left: event.deltaY < 0 ? -400 : 400,
+      behavior:'smooth'
+    });
+  });
