@@ -548,13 +548,14 @@ li img {
 
 /* Footer */
 #big {
-  border: 1px solid brown;
-  width: 77.5%;
+  /* border: 1px solid brown; */
+  width: 87%;
   margin: auto;
   padding: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #4a4a72;
 }
 
 #logo {
@@ -609,9 +610,54 @@ li img {
   letter-spacing: 1.px;
   font-size: 0.860em
 }
-
-#cc {
+div>h4{
+  margin: 5px 0px 10px 0px;
+}
+#footer_chick+p{
+  display: flex;
   
+  word-spacing: 0.3rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_mutton+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_fish+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_ready+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_exotic+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_spreads+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#footer_kebabs+p{
+  display: flex;
+  word-spacing: 0.1rem;
+  line-height: 32px;
+  letter-spacing: 1.px;
+}
+#cc {
+  padding-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -625,9 +671,10 @@ li img {
 #listt {
   /* border: 1px solid red; */
   line-height: 25px;
-  width: 20%;
+  width: 15%;
   height: auto;
   left: 10%;
+  
   /* margin-right: -90px; */
 
 }
@@ -658,8 +705,9 @@ li img {
 #last {
   width: 100%;
   text-align: center;
-  font-size: 0.860em;
+  /* font-size: 0.860em; */
   line-height: 20px;
+  padding-top: 10px;
 }
 
 /* Cart */
