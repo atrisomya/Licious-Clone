@@ -32,7 +32,6 @@ body{
     width:23%;
     min-height: 90vh !important;
     background-color: #d93c64;
-    /* padding: 20px; */
 }
 .main-area{
     width:77%;
@@ -117,7 +116,7 @@ background: radial-gradient(circle, rgba(218,218,218,1) 32%, rgba(206,147,216,1)
 .form_head {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 60px;
     background: rgb(255,247,158);
 background: radial-gradient(circle, rgba(255,247,158,1) 32%, rgba(236,139,139,1) 73%);
 }

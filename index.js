@@ -36,19 +36,28 @@ const userLogin=()=>{
     
     .then((userCredential) => {
       const user = userCredential.user;
-      window.alert("Success! Welcome back!");
-      document.getElementById('email').value = ""
-      document.getElementById('password').value = ""
-      $('.notification-container').removeClass('selected').addClass('dismiss');
-      let name = document.getElementById("showFilePanel");
-      name.innerText = email;
-      name.style.color='#d11243'
-      name.style.fontWeight ='bold'
-      let logout = document.getElementById('logout')
-      logout.style.display='flex'
-      var current_user = document.getElementById("showFilePanel").innerText;
-      localStorage.setItem('currentUser',JSON.stringify(current_user));
+      if(user.email === 'admin@gmail.com'){
+        alert("Welcome ADMIN")   
+        document.getElementById('email').value = ""
+        document.getElementById('password').value = "" 
+        location.href = './admin.html'
 
+      }else{
+
+          window.alert("Success! Welcome back!");
+          document.getElementById('email').value = ""
+          document.getElementById('password').value = ""
+          $('.notification-container').removeClass('selected').addClass('dismiss');
+          let name = document.getElementById("showFilePanel");
+          name.innerText = email;
+          name.style.color='#d11243'
+          name.style.fontWeight ='bold'
+          let logout = document.getElementById('logout')
+          logout.style.display='flex'
+          var current_user = document.getElementById("showFilePanel").innerText;
+          localStorage.setItem('currentUser',JSON.stringify(current_user));
+          
+        }
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -254,6 +263,7 @@ ref.on("value", function(snapshot) {
 
 const appendProducts = (data)=>{
     let addPro = document.querySelector('.add_product')
+    addPro.innerHTML = ""
     data.forEach((el)=>{
         let div = document.createElement("div");
         div.className = 'products'
@@ -318,7 +328,7 @@ ref.on("value", function(snapshot) {
 
 function appendCategory(data) {
     let cat = document.getElementById('shop_by_cat_ccontainer');
-
+    cat.innerHTML = ""
     data.forEach((el)=> {
         let div = document.createElement('div');
         let catImg = document.createElement('img');

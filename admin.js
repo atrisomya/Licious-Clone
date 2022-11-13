@@ -289,7 +289,7 @@ ref.on("value", function(snapshot) {
    cat_count.innerText = newArrCat.length
    console.log(newArrCat.length)
    let tab_body = document.getElementById('table-cat-rows')
-  //  tab_body.innerHTML = ""
+   tab_body.innerHTML = ""
    newArrCat.forEach((el)=>{
       
       let row = document.createElement('tr')
@@ -348,3 +348,10 @@ ref.on("value", function(snapshot) {
 }, function (error) {
    console.log("Error: " + error.code);
 });
+
+let logout = document.querySelector(".logout-session")
+logout.addEventListener('click',logOut)
+
+function logOut(){
+  location.href = './index.html'
+}
