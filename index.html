@@ -69,13 +69,13 @@
                         <li> <span><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/fe100e84-9e15-c179-ecca-7cde26af9969/original/PBM_6_(7).png" alt=""></span> Plant-based Meat</li>
                     </div>
             </div>
-            <div>
+            <div id="showFilePanel">
                 <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="">
-                <p id="showFilePanel">Login</p>
+                <p>Login</p>
             </div>
-            <div>
+            <div id="showFilePanelCart">
                 <img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="">
-                <p id="showFilePanelCart">cart</p>
+                <p>cart</p>
             </div>
             <div id="logout">
                 <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="">
@@ -118,7 +118,7 @@
                 <h2>Order Summary</h2>
                 <p class="close" id="closeFilePanelCart">x</p>
             </div>
-            <div class="offer_if"></div>
+            <div class="offer_if"><p>Free delivery on all orders above ₹399</p></div>
             <div class="cart_item_append">
                 <div class="cart_item">
                     <div id="cart_item_upper">
@@ -192,10 +192,10 @@
 
                     <h3>Bill Details</h3>
                     <div id="only_p">
-                        <p>SubTotal</p> <p style="text-align: right;">1</p>
-                        <p>Delivery Charges</p> <p style="text-align: right;">2</p>
-                        <p>Discount</p><p style="text-align: right;">100</p>
-                        <h4>Total</h4><p style="text-align: right;">100</p>
+                        <p>SubTotal</p> <p style="text-align: right;" id="sub_total"></p>
+                        <p>Delivery Charges</p> <p style="text-align: right;">0</p>
+                        <p>Discount</p><p style="text-align: right;">0</p>
+                        <h4>Total</h4><p style="text-align: right;" id="total_price"></p>
                     </div>
                                     
                 </div>
@@ -372,11 +372,11 @@
             </div>
             <div class="products">
                 <img class="image_pro" src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/fcea4075-0ed2-23c1-2b3f-1cddcbd1d11f/original/Chicken-Breast-Boneless-(3-4-Pieces)-Hero-Shot_(1).jpg?format=webp" alt="">
-                <p class="title">Chicken Curry Cut - Small Pieces</p>
-                <p class="desc">Fresh Nakhre & fresh bone-in & boneless chicken cuts</p>
+                <p class="title">Chicken Curry Cut - Small Pieces (Large Pack)</p>
+                <p class="desc">Bone-in chunky pieces of skinless meat including Two </p>
                 <div class="product_rate">
                     
-                    <p class="product_price">MRP:₹ 179</p>
+                    <p class="product_price">MRP:₹ 328</p>
                    
                     <button id="add_to_cart_btn">ADD TO CART</button>
                 </div>
@@ -387,10 +387,10 @@
             </div>
             <div class="products">
                 <img class="image_pro" src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/4cad2ee9-9257-9109-62a1-da4082b2cf36/original/sho.jpg?format=webp" alt="">
-                <p class="title">Chicken Curry Cut - Small Pieces</p>
-                <p class="desc">Fresh Nakhre & fresh bone-in & boneless chicken cuts</p>
+                <p class="title">Chicken Breast - Boneless</p>
+                <p class="desc">Juicy, boneless fillets: special nakhre for special cuts</p>
                 <div class="product_rate">
-                    <p class="product_price">MRP: ₹ 179</p>
+                    <p class="product_price">MRP: ₹ 269</p>
                     
                     <button id="add_to_cart_btn">ADD TO CART</button>
                 </div>
@@ -438,11 +438,11 @@
         </div>
             <div class="products">
                 <img class="image_pro" src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/faa6ff18-1108-6acf-4885-aa0fdb5e13ec/original/Chunky-Shawarma-Chicken-Spread_(7).jpg?format=webp" alt="">
-                <p class="title">Chicken Curry Cut - Small Pieces</p>
-                <p class="desc">Fresh Nakhre & fresh bone-in & boneless chicken cuts</p>
+                <p class="title">Chunky Sriracha Chicken Spread</p>
+                <p class="desc">Freshly cooked chicken in a creamy, spicy sriracha base.</p>
                 
                 <div class="product_rate">
-                    <p class="product_price">MRP: ₹ 179</p>
+                    <p class="product_price">MRP: ₹ 229</p>
                     <button id="add_to_cart_btn">ADD TO CART</button>
                 </div>
                 <div class="delivery">
@@ -452,10 +452,10 @@
             </div>
             <div class="products">
                 <img class="image_pro" src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/ad60f59b-612e-11b8-80f4-3308430cc609/original/Peppery-Chicken-Salami_(1).jpg?format=webp" alt="">
-                <p class="title">Chicken Curry Cut - Small Pieces</p>
-                <p class="desc">Fresh Nakhre & fresh bone-in & boneless chicken cuts</p>
+                <p class="title">Chunky Shawarma Chicken Spread</p>
+                <p class="desc">A creamy base with freshly roasted chicken chunks...</p>
                 <div class="product_rate">
-                    <p class="product_price">MRP: ₹ 179</p>
+                    <p class="product_price">MRP: ₹ 219</p>
                    
                     <button id="add_to_cart_btn">ADD TO CART</button>
                 </div>
@@ -466,10 +466,10 @@
             </div>
             <div class="products">
                 <img class="image_pro" src="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/36c60289-829d-830f-d4c7-c62675adb323/original/Frank---Chorizo-unCooked+new.jpg?format=webp" alt="">
-                <p class="title">Chicken Curry Cut - Small Pieces</p>
-                <p class="desc">Fresh Nakhre & fresh bone-in & boneless chicken cuts</p>
+                <p class="title">Chunky Herby Tomato Chicken Spread</p>
+                <p class="desc">A pleasant contrast of Meaty chicken chunks flavored</p>
                 <div class="product_rate">
-                    <p class="product_price">MRP: ₹ 179</p>
+                    <p class="product_price">MRP: ₹ 199</p>
                     
                     <button id="add_to_cart_btn">ADD TO CART</button>
                 </div>
@@ -519,10 +519,11 @@
         </div>
     </div>
  <!-- Footer -->
- <div class="big">
+ <div id="big">
  
     <div id="logo">
         <img src="https://www.licious.in/img/default/licious-logo.svg" alt="">
+        </div>
         <div id="list">
             <div id="listt">
                 <h4>USEFUL LINKS</h4>
@@ -602,7 +603,7 @@
         <p id="last">Licious is your one-stop fesh meat delivery shop. In here, you get nothing but the freshest meat & seafood, delivered straight to your doorstep. Now you can buy meat online anytime at your convenience. Indulge in our diverse selection: Chicken,
             Mutton, Seafood (Fish, Prawns, Crabs), Marinades & Cold Cuts. All our products are completely natural and healthy. Once you've experienced Licious, you'll never go back to the old way of buying meat and seafood.</p>
 
-    </div>
+    <!-- </div> -->
 </div>
     <script src="./index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
