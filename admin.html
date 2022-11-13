@@ -23,11 +23,11 @@
 
         <div class="main-container">
             <div class="sidebar">
-                   <div class="products">
+                   <div class="products" id="products">
                     <i class="fa-solid fa-clipboard"></i>
                     <a href="">Products</a>
                    </div>
-                   <div class="products">
+                   <div class="products" id="category">
                     <i class="fa-solid fa-folder-open"></i>
                     <a href="">Category</a>
                    </div>
@@ -45,12 +45,12 @@
                     <div class="data total_product">
                         <i class="fa-solid fa-clipboard"></i>
                         <p>Total No of Products</p>
-                        <p id="product_count">14</p>
+                        <p id="product_count">0</p>
                     </div>
                     <div class="data total_categories">
                         <i class="fa-solid fa-folder-open"></i>
                         <p>Total No of Categories</p>
-                        <p id="category_count">14</p>
+                        <p id="category_count">0</p>
                     </div>
                     <div class="data total_orders">
                         <i class="fa-solid fa-truck-fast"></i>
@@ -64,7 +64,7 @@
                         <button id="addNewProd">Add</button>
                         <div id="addproductform">
                             <div id="add_product_form">
-                                <h3>Add Product <span id="closeprodform">X</span></h3>
+                                <h3>Add Product <span class="closeprodform">X</span></h3>
                                 <input type="text" id="product_id" placeholder="Enter Product ID">
                                 <input type="text" id="product_name" placeholder="Enter Product Name">
                                 <input type="text" id="product_desc" placeholder="Enter Product desc">
@@ -73,8 +73,25 @@
                                 <button id="add_product_btn">Add Product</button>
                             </div> 
                         </div>
-                        <button>Update</button>
-                        <button>Delete</button>
+                        <button id="update_cur_prod">Update</button>
+                        <div id="update_product_form">
+                            <div id="add_product_form">
+                                <h3>Update Product <span class="closeupdform">X</span></h3>
+                                <input type="text" id="update_product_id" placeholder="Enter Product ID">
+                                <input type="text" id="update_product_name" placeholder="Enter Product Name">
+                                <input type="text" id="update_product_desc" placeholder="Enter Product desc">
+                                <input type="text" id="update_product_MRP" placeholder="Enter Product Price">
+                                <button id="add_update_btn">Update Product</button>
+                            </div> 
+                        </div>
+                        <button id="delete_cur_prod">Delete</button>
+                        <div id="delete_product_form">
+                            <div id="add_product_form">
+                                <h3>Delete Product <span class="closedelform">X</span></h3>
+                                <input type="text" id="del_product_id" placeholder="Enter Product ID">
+                                <button id="add_delete_btn">Delete Product</button>
+                            </div> 
+                        </div>
                     </div>
                     <div class="form_rows">
                         <table class="product_table">
@@ -86,25 +103,56 @@
                                     <th>Price</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="selected">
-                                    <td>product_101</td>
-                                    <td>Chicken Tikka</td>
-                                    <td>This is chicken Tikka</td>
-                                    <td>199</td>
+                            <tbody id="table-rows">
+                                <!-- -------append data------ -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="form_products form_category">
+                    <div class="form_head">
+                        <h3>Category</h3>
+                        <button id="addNewCat">Add</button>
+                        <div id="addcategoryform">
+                                <div id="add_category_form">
+                                    <h3>Add Category <span class="closecatform">X</span></h3>
+                                    <input type="text" id="category_id" placeholder="Enter Category ID">
+                                    <input type="text" id="category_name" placeholder="Enter Category Name">
+                                    <input type="file" id="category_image" placeholder="Choose Category Image">
+                                    <button id="add_category_btn">Add Category</button>
+                                </div> 
+                        </div>
+                        <button id="update_cur_cat">Update</button>
+                        <div id="update_category_form">
+                            <div id="add_category_form">
+                                <h3>Update Category <span class="closecatupdform">X</span></h3>
+                                <input type="text" id="update_category_id" placeholder="Enter Category ID">
+                                <input type="text" id="update_category_name" placeholder="Enter Category Name">
+                                <button id="add_update_btn_cat">Update Category</button>
+                            </div> 
+                        </div>
+                        <button id="delete_cur_cat">Delete</button>
+                        <div id="delete_category_form">
+                            <div id="add_category_form">
+                                <h3>Delete Category <span class="closecatdelform">X</span></h3>
+                                <input type="text" id="del_cat_id" placeholder="Enter Category ID">
+                                <button id="add_delete_cat_btn">Delete Category</button>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="form_rows">
+                        <table class="product_table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <!-- <th>Description</th>
+                                    <th>Price</th> -->
                                 </tr>
-                                <tr class="selected">
-                                    <td>product_101</td>
-                                    <td>Chicken Tikka</td>
-                                    <td>This is chicken Tikka</td>
-                                    <td>199</td>
-                                </tr>
-                                <tr class="selected">
-                                    <td>product_101</td>
-                                    <td>Chicken Tikka</td>
-                                    <td>This is chicken Tikka</td>
-                                    <td>199</td>
-                                </tr>
+                            </thead>
+                            <tbody id="table-cat-rows">
+                                <!-- -------append----- -->
                             </tbody>
                         </table>
                     </div>
@@ -113,13 +161,7 @@
         </div>
 
     
-    <div id="add_category_form">
-        <h3>Add Category</h3>
-        <input type="text" id="category_id" placeholder="Enter Category ID">
-        <input type="text" id="category_name" placeholder="Enter Category Name">
-        <input type="file" id="category_image" placeholder="Choose Category Image">
-        <button id="add_category_btn">Add Category</button>
-    </div>
+    
 </body>
 </html>
 <script src="admin.js"></script>

@@ -5,6 +5,8 @@
 body{
     background-color: #f7f6f6;
 }
+
+
 .navbar{
     height: 70px;
     background-color: #fff;
@@ -128,6 +130,7 @@ background: radial-gradient(circle, rgba(255,247,158,1) 32%, rgba(236,139,139,1)
     outline: none;
     border-radius: 10px;
     margin: 10px;
+    cursor: pointer;
 }
 .form_head h3 {
     font-size: 25px;
@@ -136,14 +139,34 @@ background: radial-gradient(circle, rgba(255,247,158,1) 32%, rgba(236,139,139,1)
     margin-left: 20px;
     margin-right: 50%;
 }
-
+.form_rows{
+    max-height:400px;
+    overflow:auto;
+}
+  .form_rows::-webkit-scrollbar
+  {
+      width: 7px;
+      background-color: #F5F5F5;
+  }
+  
+  .form_rows::-webkit-scrollbar-thumb
+  {
+      border-radius: 10px;
+      background-color: #FFF;
+      background-image: -webkit-linear-gradient(top,
+                                                #08f757 0%,
+                                                #bfe8f9 50%,
+                                                #9fefca 51%,
+                                                #57ed2a 100%);
+  }
 .product_table {
     margin: 25px 0px;
     font-size: 1em;
     width: 100%;
     border-radius: 5px;
-    overflow: hidden;
+    /* height: 100%; */
     border-collapse: collapse;
+    /* overflow-y:auto; */
 }
 
 .product_table thead tr {
@@ -219,6 +242,100 @@ input {
 }
 
 #add_product_form span {
+    margin-left: 100px;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+    cursor: pointer;
+}
+#update_product_form{
+    display: none;
+    position: absolute;
+    height: 450px;
+    width: 350px;
+    background-color: white;
+    z-index: 2;
+    margin: auto;
+    margin-left: 22%;
+    margin-top: 14%;
+    border: 1px solid black;
+}
+#delete_product_form{
+    display: none;
+    position: absolute;
+    height: 200px;
+    width: 350px;
+    background-color: white;
+    z-index: 2;
+    margin: auto;
+    margin-left: 22%;
+    margin-top: 14%;
+    border: 1px solid black;
+}
+
+/* .form_products {
+    display: none;
+} */
+
+.form_category {
+    display: none;
+}
+
+
+#addcategoryform {
+    display: none;
+    position: absolute;
+    height: 450px;
+    width: 350px;
+    background-color: white;
+    z-index: 3;
+    margin: auto;
+    margin-left: 22%;
+    margin-top: 14%;
+    border: 1px solid black;
+    /* transform: translateX(-50%); */
+}
+#add_category_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#add_category_form > h3 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px;
+    /* background-color: #009879; */
+}
+
+#update_category_form{
+    display: none;
+    position: absolute;
+    height: 350px;
+    width: 380px;
+    background-color: white;
+    z-index: 2;
+    margin: auto;
+    margin-left: 22%;
+    margin-top: 14%;
+    border: 1px solid black;
+}
+
+#delete_category_form{
+    display: none;
+    position: absolute;
+    height: 200px;
+    width: 350px;
+    background-color: white;
+    z-index: 2;
+    margin: auto;
+    margin-left: 22%;
+    margin-top: 14%;
+    border: 1px solid black;
+}
+
+.form_category span {
     margin-left: 100px;
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
