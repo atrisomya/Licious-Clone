@@ -288,13 +288,33 @@ ref.on("value", function(snapshot) {
    let cat_count = document.getElementById('category_count')
    cat_count.innerText = newArrCat.length
    console.log(newArrCat.length)
+   let tab_body = document.getElementById('table-cat-rows')
+  //  tab_body.innerHTML = ""
+   newArrCat.forEach((el)=>{
+      
+      let row = document.createElement('tr')
+      row.className = 'selected'
+      let id = document.createElement('td')
+      id.innerText = el.id;
+      let name = document.createElement('td')
+      name.innerText = el.name
+      
+      row.append(id,name)
+
+      tab_body.append(row)
+
+
+      console.log(row)
+   })
+
 
   //  appendCategory(newArrCat)
 }, function (error) {
    console.log("Error: " + error.code);
 });
-  var ref = firebase.database().ref('products/');
 
+
+var ref = firebase.database().ref('products/');
 ref.on("value", function(snapshot) {
 //    console.log(snapshot.val());
    let category_data = snapshot.val();
