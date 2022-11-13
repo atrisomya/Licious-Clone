@@ -15,3 +15,9 @@ Member 4: fw21_0902 - mahendra pratap singh
 Project Name: Delicious
 
 Project logo: https://i.postimg.cc/yYM2KhGS/Delicious-1-removebg-preview.png
+
+
+To get to the admin panel you can login from the main page itself.
+The ID and password for the same will be:
+ID: admin@gmail.com
+Password: 123456
