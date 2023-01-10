@@ -29,7 +29,7 @@ This is a collaborative project where we have tried to provide a fully functiona
 <ul>
   <li><a href="https://github.com/atrisomya">@Somya Upadhyay </a></li>
   <li><a href="https://github.com/yogendraft21">@Yogendra Singh Verma  </a> </li>
-  <li><a href="https://github.com/iamankit014">@Ankit Verma </a> </li>
+  <li><a href="https://github.com/iamankit014">@Ankit Kumar </a> </li>
   <li><a href="https://github.com/Mhendrapratap">@Mahendra Pratap Singh </a></li>
   <li><a href="https://github.com/Rakeshpatil2019">@Rakesh Patil </a> </li>
 </ul>
